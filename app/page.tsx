@@ -1,7 +1,5 @@
 "use client";
 
-import { createClient } from '@supabase/supabase-js'
-import { cookies } from 'next/headers'
 
 
 import { DailyTransport } from "@daily-co/realtime-ai-daily";
@@ -20,19 +18,7 @@ import {
   defaultServices,
 } from "@/rtvi.config";
 
-export  async function Page() {
-  const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY)
 
-  const { data: todos } = await supabase.from('todos').select()
-
-  return (
-    <ul>
-      {todos?.map((todo) => (
-        <li>{todo}</li>
-      ))}
-    </ul>
-  )
-}
 
 export default function Home() {
   const [showSplash, setShowSplash] = useState(true);
@@ -74,6 +60,7 @@ export default function Home() {
             <Header />
             <div id="app">
               <App />
+              
             </div>
           </main>
           <aside id="tray" />

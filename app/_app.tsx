@@ -6,6 +6,7 @@ const { data: todos } = await supabase.from('todos').select()
 function Page() {
   const [todos, setTodos] = useState([])
 
+
   useEffect(() => {
     function getTodos() {
 
@@ -19,8 +20,8 @@ function Page() {
 
   return (
     <div>
-      {todos.map((data) => (
-        <li key={data}>{todos}</li>
+      {todos.map((todo) => (
+        <li key={todo}>{todo}</li>
       ))}
     </div>
   )
