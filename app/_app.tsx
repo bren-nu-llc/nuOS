@@ -1,6 +1,8 @@
 
 import { useState, useEffect } from 'react'
-import { supabase } from '../utils/supabase'
+import { SupabaseClient } from '@supabase/supabase-js'
+import { supabase } from '@/utils/supabase'
+
 const { data: todos } = await supabase.from('todos').select()
 
 function Page() {
