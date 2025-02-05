@@ -17,8 +17,8 @@ const fontMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Daily Bots Demo",
-  description: "Daily Bots voice-to-voice example app",
+  title: "nuOS - nuAssistant - BrenNu LLC",
+  description: "Agent designed to help with everyday life",
   metadataBase: new URL("https://demo.dailybots.ai"),
 };
 
