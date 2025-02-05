@@ -38,6 +38,31 @@ yarn run dev
 All Voice Client configuration can be found in the [rtvi.config.ts](/rtvi.config.ts) file. You can edit any prompts, services of config settings in this file.
 
 
+### .env + Supabase config
+```shell
+NEXT_PUBLIC_BASE_URL=/api
+DAILY_BOTS_URL=
+DAILY_BOTS_API_KEY=
+CARTESIA_API_KEY=
+TOGETHER_API_KEY=
+GEMINI_API_KEY=
+OPENAI_API_KEY=
+GROK_API_KEY=
+
+
+#OPTIONAL
+
+
+SUPABASE_DATABASE_URL=
+SUPABASE_SERVICE_ROLE_KEY=
+SUPABASE_ANON_KEY=
+SUPABASE_JWT_SECRET=
+NEXT_PUBLIC_SUPABASE_DATABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+```
+
+
+
 ### API routes
 
 This project exposes three server-side routes:

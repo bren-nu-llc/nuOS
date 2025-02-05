@@ -1,5 +1,7 @@
 "use client";
 
+
+
 import { DailyTransport } from "@daily-co/realtime-ai-daily";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { useEffect, useRef, useState } from "react";
@@ -16,8 +18,11 @@ import {
   defaultServices,
 } from "@/rtvi.config";
 
+
+
 export default function Home() {
   const [showSplash, setShowSplash] = useState(true);
+
   const voiceClientRef = useRef<RTVIClient | null>(null);
 
   useEffect(() => {
@@ -55,6 +60,7 @@ export default function Home() {
             <Header />
             <div id="app">
               <App />
+              
             </div>
           </main>
           <aside id="tray" />
