@@ -1,8 +1,4 @@
-
-import { createClient } from "@supabase/supabase-js";
-const supabaseKey = process.env.SUPABASE_KEY
-const supabaseUrl = 'https://pxdysugexwdhirsmuhdh.supabase.co'
-export const supabase = createClient(supabaseUrl, '${supabaseKey}')
+"use client";
 
         
 useRTVIClient
@@ -23,7 +19,10 @@ import {
   defaultServices,
 } from "@/rtvi.config";
 
-
+import { createClient } from "@supabase/supabase-js";
+const supabaseKey = process.env.SUPABASE_KEY
+const supabaseUrl = 'https://pxdysugexwdhirsmuhdh.supabase.co'
+export const supabase = createClient(supabaseUrl, '${supabaseKey}')
 
 export default function Home() {
   const [showSplash, setShowSplash] = useState(true);
