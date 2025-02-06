@@ -26,7 +26,7 @@ export async function POST(request: Request) {
     api_keys: {
       together: process.env.TOGETHER_API_KEY,
       cartesia: process.env.CARTESIA_API_KEY,
-      anthropic: process.env.
+      anthropic: process.env.ANTHROPIC_API_KEY,
     },
     config: defaultConfig,
     dialout_settings: dialout_data,
