@@ -1,4 +1,3 @@
-# together.AI WORKING + Voices
 # nuOS Vision(Alpha) Demo
 
 NextJS app built with [Daily Bots](https://bots.daily.co) and RTC 
