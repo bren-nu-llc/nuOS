@@ -8,7 +8,7 @@ import { useEffect, useRef, useState } from "react";
 import { LLMHelper, RTVIClient } from "realtime-ai";
 import { RTVIClientAudio, RTVIClientProvider } from "realtime-ai-react";
 import { Analytics } from "@vercel/analytics/next"
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import App from "@/components/App";
 import { AppProvider } from "@/components/context";
 import Header from "@/components/Header";
@@ -62,7 +62,7 @@ export default function Home() {
             <div id="app">
               <App />
               <Analytics />
-
+              <SpeedInsights />
             </div>
           </main>
           <aside id="tray" />
