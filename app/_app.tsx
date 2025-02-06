@@ -1,16 +1,13 @@
 
 import { useState, useEffect } from 'react'
-import { SupabaseClient } from '@supabase/supabase-js'
-import { supabase } from '@/utils/supabase'
-
-const { data: todos } = await supabase.from('todos').select()
+import { supabase } from '../utils/supabase'
 
 function Page() {
   const [todos, setTodos] = useState([])
 
-
   useEffect(() => {
     function getTodos() {
+      const { data: todos } = await supabase.from('todos').select()
 
       if (todos.length > 1) {
         setTodos(todos)

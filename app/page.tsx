@@ -1,6 +1,11 @@
 "use client";
 
 
+import { createClient } from "@supabase/supabase-js";
+const supabaseKey = process.env.SUPABASE_KEY
+const supabaseUrl = 'https://pxdysugexwdhirsmuhdh.supabase.co'
+export const supabase = createClient(supabaseUrl, supabaseKey)
+        
 
 import { DailyTransport } from "@daily-co/realtime-ai-daily";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
@@ -61,8 +66,8 @@ export default function Home() {
             <Header />
             <div id="app">
               <App />
-              <Analytics />
-              <SpeedInsights />
+              <Analytics/>
+              <SpeedInsights/>
             </div>
           </main>
           <aside id="tray" />
