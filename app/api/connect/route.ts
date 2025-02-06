@@ -22,6 +22,8 @@ export async function POST(request: Request) {
       openai: process.env.OPENAI_API_KEY,
       grok: process.env.GROK_API_KEY,
       gemini: process.env.GEMINI_API_KEY,
+      anthropic: process.env.ANTHROPIC_KEY_KEY,
+      
     },
     config: [...config],
     rtvi_client_version,

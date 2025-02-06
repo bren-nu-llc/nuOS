@@ -1,17 +1,16 @@
-"use client";
-
 
 import { createClient } from "@supabase/supabase-js";
 const supabaseKey = process.env.SUPABASE_KEY
 const supabaseUrl = 'https://pxdysugexwdhirsmuhdh.supabase.co'
-export const supabase = createClient(supabaseUrl, supabaseKey)
-        
+export const supabase = createClient(supabaseUrl, '${supabaseKey}')
 
+        
+useRTVIClient
 import { DailyTransport } from "@daily-co/realtime-ai-daily";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { useEffect, useRef, useState } from "react";
 import { LLMHelper, RTVIClient } from "realtime-ai";
-import { RTVIClientAudio, RTVIClientProvider } from "realtime-ai-react";
+import { RTVIClientAudio, RTVIClientProvider, useRTVIClient } from "realtime-ai-react";
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import App from "@/components/App";
