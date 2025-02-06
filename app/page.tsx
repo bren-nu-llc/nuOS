@@ -7,6 +7,7 @@ import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { useEffect, useRef, useState } from "react";
 import { LLMHelper, RTVIClient } from "realtime-ai";
 import { RTVIClientAudio, RTVIClientProvider } from "realtime-ai-react";
+import { Analytics } from "@vercel/analytics/next"
 
 import App from "@/components/App";
 import { AppProvider } from "@/components/context";
@@ -60,7 +61,8 @@ export default function Home() {
             <Header />
             <div id="app">
               <App />
-              
+              <Analytics />
+
             </div>
           </main>
           <aside id="tray" />
