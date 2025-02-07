@@ -7,7 +7,7 @@ import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { useEffect, useRef, useState } from "react";
 import { LLMHelper, RTVIClient } from "realtime-ai";
 import { RTVIClientAudio, RTVIClientProvider } from "realtime-ai-react";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics, type BeforeSendEvent } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import App from "@/components/App";
 import { AppProvider } from "@/components/context";
@@ -61,7 +61,13 @@ export default function Home() {
             <Header />
             <div id="app">
               <App />
-              <Analytics endpoint="https://scorpio-ai.vercel.app"/>
+              
+              <Analytics beforeSend={(event: BeforeSendEvent) => {
+          if (event.url.includes('/private')) {
+            return null;
+          }
+          return event;
+        }}  endpoint="https://scorpio-ai.vercel.app"/>
               <Analytics />
               <SpeedInsights />
             </div>
