@@ -61,14 +61,20 @@ export default function Home() {
             <Header />
             <div id="app">
               <App />
-              
+
               <Analytics beforeSend={(event: BeforeSendEvent) => {
-          if (event.url.includes('/private')) {
-            return null;
-          }
-          return event;
-        }}  endpoint="https://scorpio-ai.vercel.app"/>
-              <Analytics />
+                if (event.url.includes('/private')) {
+                  return null;
+                }
+                return event;
+                //$$$
+              }} endpoint="https://scorpio-ai.vercel.app/*" />
+              <Analytics beforeSend={(event: BeforeSendEvent) => {
+                if (event.url.includes('/private')) {
+                  return null;
+                }
+                return event;
+              }} />
               <SpeedInsights />
             </div>
           </main>
