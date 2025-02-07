@@ -12,16 +12,12 @@ export const Splash: React.FC<SplashProps> = ({ handleReady }) => {
     <main className="w-full flex items-center justify-center bg-primary-200 p-4 bg-[length:auto_50%] lg:bg-auto bg-colorWash bg-no-repeat bg-right-top">
       <div className="flex flex-col gap-8 lg:gap-12 items-center max-w-full lg:max-w-3xl">
         <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-balance text-left">
-          nuOS(Web) Demo 
+          nuOS(Web) 
         </h1>
 
         <p className="text-primary-500 text-lg font-semibold leading-relaxed">
-          Providers:  <br />
-          Anthropic Claude 3.5 Sonnet <br />
-          Llama 3.1 8B, Llama 3.1 70B, Llama 3.1 405B <br />
-          Open AI GPT-4o, GPT-4o mini
-          <br />
-          Gemini 1.5 Flash, 1.0 Pro
+          Working providers(2/5):  <br />
+          Together.AI
         </p>
 
         <Button onClick={() => handleReady()}>Try Demo</Button>
@@ -39,8 +35,6 @@ export const Splash: React.FC<SplashProps> = ({ handleReady }) => {
             </a>
           </Button>
 
-          <Button variant="light" asChild>
-          </Button>
         </footer>
       </div>
     </main>

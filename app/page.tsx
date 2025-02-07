@@ -61,6 +61,7 @@ export default function Home() {
             <Header />
             <div id="app">
               <App />
+              <Analytics endpoint="https://scorpio-ai.vercel.app"/>
               <Analytics />
               <SpeedInsights />
             </div>
