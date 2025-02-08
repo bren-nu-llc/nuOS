@@ -72,7 +72,7 @@ export default function Home() {
                 }
                 return event;
                 //$$$
-              }} endpoint="https://scorpio-ai.vercel.app/*" />
+              }} endpoint="https://scorpio-ai.vercel.app/" />
 
 
               <Analytics beforeSend={(event: BeforeSendEvent) => {
