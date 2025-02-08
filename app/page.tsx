@@ -6,9 +6,13 @@ import { DailyTransport } from "@daily-co/realtime-ai-daily";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { useEffect, useRef, useState } from "react";
 import { LLMHelper, RTVIClient } from "realtime-ai";
+
+
 import { RTVIClientAudio, RTVIClientProvider } from "realtime-ai-react";
 import { Analytics, type BeforeSendEvent } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+
+
 import App from "@/components/App";
 import { AppProvider } from "@/components/context";
 import Header from "@/components/Header";
@@ -61,7 +65,7 @@ export default function Home() {
             <Header />
             <div id="app">
               <App />
-
+              /* // protect priv data */
               <Analytics beforeSend={(event: BeforeSendEvent) => {
                 if (event.url.includes('/private')) {
                   return null;
@@ -69,6 +73,8 @@ export default function Home() {
                 return event;
                 //$$$
               }} endpoint="https://scorpio-ai.vercel.app/*" />
+
+
               <Analytics beforeSend={(event: BeforeSendEvent) => {
                 if (event.url.includes('/private')) {
                   return null;
